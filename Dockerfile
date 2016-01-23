@@ -2,7 +2,7 @@ FROM daocloud.io/ubuntu
 MAINTAINER adware
 ENV REFRESHED_AT 2016-1-25
 RUN apt-get update -qq && apt-get install -qqy curl
-RUN curl https://get.docker.io/gpg | apt-key add -
+RUN curl -L https://get.docker.io/gpg | apt-key add -
 RUN echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc openjdk-6-jdk git-core lxc-docker
 
